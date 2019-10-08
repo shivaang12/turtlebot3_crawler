@@ -21,6 +21,24 @@ find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
+include_directories(
+  include
+)
+
+add_executable(crawler src/crawler.cpp src/main.cpp)
+ament_target_dependencies(crawler rclcpp geometry_msgs sensor_msgs)
+
+install(TARGETS
+  crawler
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
