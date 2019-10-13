@@ -3,9 +3,16 @@
 <package format="3">
   <name>turtlebot3_crawler</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>
+    <p>
+      Simple turtlebot3 obstacle avoidance ROS2 package. It uses the laser scan
+      published data to check for obstruction in its path to avoid it.
+      Turtlebot3 simply rotates when obtructed untill finds clear safe way to
+      traverse. 
+    </p>
+  </description>
   <maintainer email="shivaang14@gmail.com">shivang</maintainer>
-  <license>TODO: License declaration</license>
+  <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
